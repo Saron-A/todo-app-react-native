@@ -10,7 +10,7 @@ const index = () => {
         backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
-        gap: 16,
+        gap: 40,
         flex: 1,
         padding: 32,
       }}

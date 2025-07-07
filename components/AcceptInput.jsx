@@ -7,14 +7,17 @@ const AcceptInput = () => {
 
   const handleAddTask = () => {
     let newTaskName = input.trim();
-    let newTask = {
-      id: Date.now().toString(),
-      task: newTaskName,
-      isComplete: false,
-    };
+    if (!newTaskName) return;
+    else {
+      let newTask = {
+        id: Date.now().toString(),
+        task: newTaskName,
+        isComplete: false,
+      };
 
-    setTaskList([...taskList, newTask]);
-    setInput("");
+      setTaskList([...taskList, newTask]);
+      setInput("");
+    }
   };
 
   return (

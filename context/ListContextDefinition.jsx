@@ -5,13 +5,7 @@ export default ListContext;
 
 const ListContextDefinition = ({ children }) => {
   const [input, setInput] = useState("");
-  const [taskList, setTaskList] = useState([
-    {
-      id: "",
-      task: "",
-      isCompleted: false,
-    },
-  ]);
+  const [taskList, setTaskList] = useState([]);
   return (
     <ListContext.Provider value={{ input, setInput, taskList, setTaskList }}>
       {children}
