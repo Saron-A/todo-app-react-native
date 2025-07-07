@@ -9,7 +9,7 @@ const TaskList = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: 16,
+        gap: 24,
       }}
     >
       {taskList.length === 0 ? (
@@ -37,11 +37,22 @@ const TaskList = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               padding: 16,
-              borderWidth: 0.3,
+
               borderRadius: 32,
+              shadowOffset: { width: 1, height: 2 },
+              shadowColor: "black",
+              shadowOpacity: 0.2,
+              shadowRadius: 4,
+              backgroundColor: "white",
             }}
           >
-            <Text>{task.task}</Text>
+            <Text
+              style={{
+                alignSelf: "center",
+              }}
+            >
+              {task.task}
+            </Text>
             <View
               style={{
                 display: "flex",
@@ -49,8 +60,27 @@ const TaskList = () => {
                 gap: 16,
               }}
             >
-              <Text>📝</Text>
-              <Text>🗑️</Text>
+              <Text
+                style={{
+                  backgroundColor: "lightskyblue",
+                  color: "white",
+                  paddingVertical: 8,
+                  paddingHorizontal: 16,
+                  borderRadius: 16,
+                }}
+              >
+                Edit
+              </Text>
+              <Text
+                style={{
+                  backgroundColor: "lightskyblue",
+                  color: "white",
+                  padding: 8,
+                  borderRadius: 16,
+                }}
+              >
+                Delete
+              </Text>
             </View>
           </View>
         ))

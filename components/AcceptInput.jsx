@@ -36,7 +36,7 @@ const AcceptInput = () => {
       >
         <TextInput
           style={{
-            borderWidth: 0.5,
+            borderWidth: 1,
             borderColor: "black",
             borderRadius: 16,
             color: "black",
