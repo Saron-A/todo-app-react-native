@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Text, TextInput, View } from "react-native";
+import ListContext from "../context/ListContextDefinition.jsx";
 
 const AcceptInput = () => {
-  const [input, setInput] = useState("");
+  const { input, setInput, taskList, setTaskList } = useContext(ListContext);
+
+  const handleAddTask = () => {
+    let newTaskName = input.trim();
+    let newTask = {
+      id: Date.now().toString(),
+      task: newTaskName,
+      isComplete: false,
+    };
+
+    setTaskList([...taskList, newTask]);
+    setInput("");
+  };
+
   return (
     <View
       style={{
@@ -40,6 +54,7 @@ const AcceptInput = () => {
             paddingHorizontal: 12,
             borderRadius: 16,
           }}
+          onPress={handleAddTask}
         >
           Add Task
         </Text>

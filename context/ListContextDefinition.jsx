@@ -1,9 +1,10 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 const ListContext = createContext();
 export default ListContext;
 
 const ListContextDefinition = ({ children }) => {
+  const [input, setInput] = useState("");
   const [taskList, setTaskList] = useState([
     {
       id: "",
@@ -12,8 +13,10 @@ const ListContextDefinition = ({ children }) => {
     },
   ]);
   return (
-    <ListContextDefinition.provider value={{ taskList, setTaskList }}>
+    <ListContext.Provider value={{ input, setInput, taskList, setTaskList }}>
       {children}
-    </ListContextDefinition.provider>
+    </ListContext.Provider>
   );
 };
+
+export { ListContextDefinition };
