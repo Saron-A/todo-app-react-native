@@ -6,8 +6,8 @@ const Header = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "16",
-        padding: "32",
+        gap: 16,
+        padding: 32,
         backgroundColor: "white",
       }}
     >
@@ -15,8 +15,8 @@ const Header = () => {
         style={{
           textAlign: "center",
           fontWeight: "700",
-          fontSize: "24",
-          padding: "8",
+          fontSize: 24,
+          padding: 8,
         }}
       >
         TODO Application
