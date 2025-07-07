@@ -1,0 +1,37 @@
+import { Text, View } from "react-native";
+
+const Header = () => {
+  return (
+    <View
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "16",
+        padding: "32",
+        backgroundColor: "white",
+      }}
+    >
+      <Text
+        style={{
+          textAlign: "center",
+          fontWeight: "700",
+          fontSize: "24",
+          padding: "8",
+        }}
+      >
+        TODO Application
+      </Text>
+      <Text
+        style={{
+          fontWeight: "200",
+          textAlign: "center",
+          fontStyle: "italic",
+        }}
+      >
+        Add, complete, postpone and delete tasks whenever you like
+      </Text>
+    </View>
+  );
+};
+
+export default Header;
