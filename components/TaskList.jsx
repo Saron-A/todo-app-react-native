@@ -25,6 +25,11 @@ const TaskList = () => {
     setEditedTask(null);
   };
 
+  const handleDelete = (item) => {
+    const updatedList = taskList.filter((task) => task.id !== item.id);
+    setTaskList(updatedList);
+  };
+
   return (
     <View
       style={{
@@ -100,6 +105,7 @@ const TaskList = () => {
                   padding: 8,
                   borderRadius: 16,
                 }}
+                onPress={() => handleDelete(task)}
               >
                 Delete
               </Text>
