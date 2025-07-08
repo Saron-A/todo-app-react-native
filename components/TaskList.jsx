@@ -75,7 +75,16 @@ const TaskList = () => {
               backgroundColor: "white",
             }}
           >
-            <View style={{ borderWidth: 1, borderRadius: 50 }}>
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderRadius: 50,
+                borderColor: "gray",
+                width: 36,
+                height: 36,
+                backgroundColor: task.isCompleted ? "#e8f1ff" : "white",
+              }}
+            >
               <Checkbox
                 status={task.isCompleted ? "checked" : "unchecked"}
                 color="lightskyblue"

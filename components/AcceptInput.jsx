@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Text, TextInput, View } from "react-native";
+
 import ListContext from "../context/ListContextDefinition.jsx";
 
 const AcceptInput = () => {
