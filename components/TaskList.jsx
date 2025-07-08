@@ -63,7 +63,9 @@ const TaskList = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               padding: 16,
-
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 16,
               borderRadius: 32,
               shadowOffset: { width: 1, height: 2 },
               shadowColor: "black",
@@ -75,6 +77,9 @@ const TaskList = () => {
             <Text
               style={{
                 alignSelf: "center",
+                flexWrap: "wrap",
+                justifySelf: "center",
+                flex: 1,
               }}
             >
               {task.task}
