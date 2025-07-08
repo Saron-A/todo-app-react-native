@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Modal, Text, TextInput, View } from "react-native";
+import { Checkbox } from "react-native-paper";
 import ListContext from "../context/ListContextDefinition.jsx";
 
 const TaskList = () => {
@@ -65,7 +66,7 @@ const TaskList = () => {
               padding: 16,
               alignItems: "center",
               flexWrap: "wrap",
-              gap: 16,
+              gap: 8,
               borderRadius: 32,
               shadowOffset: { width: 1, height: 2 },
               shadowColor: "black",
@@ -74,6 +75,20 @@ const TaskList = () => {
               backgroundColor: "white",
             }}
           >
+            <Checkbox
+              status={task.isCompleted ? "checked" : "unchecked"}
+              color="lightskyblue"
+              uncheckedColor="gray"
+              onPress={() =>
+                setTaskList((prevList) =>
+                  prevList.map((item) =>
+                    item.id === task.id
+                      ? { ...item, isCompleted: !item.isCompleted }
+                      : item
+                  )
+                )
+              }
+            />
             <Text
               style={{
                 alignSelf: "center",
