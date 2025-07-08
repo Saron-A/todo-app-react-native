@@ -12,7 +12,7 @@ const AcceptInput = () => {
       let newTask = {
         id: Date.now().toString(),
         task: newTaskName,
-        isComplete: false,
+        isCompleted: false,
       };
 
       setTaskList([...taskList, newTask]);

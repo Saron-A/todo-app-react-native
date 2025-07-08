@@ -75,26 +75,32 @@ const TaskList = () => {
               backgroundColor: "white",
             }}
           >
-            <Checkbox
-              status={task.isCompleted ? "checked" : "unchecked"}
-              color="lightskyblue"
-              uncheckedColor="gray"
-              onPress={() =>
-                setTaskList((prevList) =>
-                  prevList.map((item) =>
-                    item.id === task.id
-                      ? { ...item, isCompleted: !item.isCompleted }
-                      : item
+            <View style={{ borderWidth: 1, borderRadius: 50 }}>
+              <Checkbox
+                status={task.isCompleted ? "checked" : "unchecked"}
+                color="lightskyblue"
+                uncheckedColor="black"
+                onPress={() =>
+                  setTaskList((prevList) =>
+                    prevList.map((item) =>
+                      item.id === task.id
+                        ? { ...item, isCompleted: !item.isCompleted }
+                        : item
+                    )
                   )
-                )
-              }
-            />
+                }
+              />
+            </View>
+
             <Text
               style={{
                 alignSelf: "center",
                 flexWrap: "wrap",
                 justifySelf: "center",
                 flex: 1,
+                textDecorationLine: task.isCompleted ? "line-through" : "none",
+                fontStyle: task.isCompleted ? "italic" : "normal",
+                color: task.isCompleted ? "gray" : "black",
               }}
             >
               {task.task}
@@ -103,7 +109,7 @@ const TaskList = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                gap: 16,
+                gap: 8,
               }}
             >
               <Text
