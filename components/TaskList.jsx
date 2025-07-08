@@ -188,7 +188,7 @@ const TaskList = () => {
                   color: "white",
                   alignSelf: "center",
                 }}
-                onPress={() => setVisible(false)}
+                onPress={() => (setVisible(false), setInput(""))}
               >
                 Cancel
               </Text>
