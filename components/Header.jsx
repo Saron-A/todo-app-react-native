@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-
+// Ayyy
 const Header = () => {
   return (
     <View
