@@ -12,7 +12,7 @@ const ListContextDefinition = ({ children }) => {
     setTaskListState(newList);
 
     try {
-      AsyncStorage.setItem("taskList", JSON.stringify(newList));
+      await AsyncStorage.setItem("taskList", JSON.stringify(newList));
     } catch (error) {
       console.error(error);
     }
@@ -33,6 +33,19 @@ const ListContextDefinition = ({ children }) => {
 
     loadTasks();
   }, []);
+
+  useEffect(() => {
+    const saveTasks = async () => {
+      try {
+        await AsyncStorage.setItem("taskList", JSON.stringify(taskList));
+      } catch (error) {
+        console.error("Error saving task list:", error);
+      }
+    };
+
+    saveTasks();
+  }, [taskList]);
+
   return (
     <ListContext.Provider value={{ input, setInput, taskList, setTaskList }}>
       {children}

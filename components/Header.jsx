@@ -28,7 +28,7 @@ const Header = () => {
           fontStyle: "italic",
         }}
       >
-        Add, complete, postpone and delete tasks whenever you like
+        Tackle daily tasks, one at a time!
       </Text>
     </View>
   );

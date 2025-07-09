@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "my-new-app",
-    "slug": "my-new-app",
+    "name": "TodoDaily",
+    "slug": "tododaily",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/list.png",
     "scheme": "mynewapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
