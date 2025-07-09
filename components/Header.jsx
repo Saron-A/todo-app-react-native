@@ -19,7 +19,7 @@ const Header = () => {
           padding: 8,
         }}
       >
-        TODO Application
+        TODO Daily
       </Text>
       <Text
         style={{
