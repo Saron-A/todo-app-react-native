@@ -19,7 +19,7 @@ const Header = () => {
           padding: 8,
         }}
       >
-        TODO Daily
+        ✏️TODO Daily
       </Text>
       <Text
         style={{

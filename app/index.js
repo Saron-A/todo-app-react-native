@@ -1,5 +1,6 @@
 import { View } from "react-native";
 import AcceptInput from "../components/AcceptInput.jsx";
+import Floating_Buttons from "../components/Floating_buttons.jsx";
 import Header from "../components/Header.jsx";
 import TaskList from "../components/TaskList.jsx";
 
@@ -18,6 +19,7 @@ const index = () => {
       <Header />
       <AcceptInput />
       <TaskList />
+      <Floating_Buttons />
     </View>
   );
 };
